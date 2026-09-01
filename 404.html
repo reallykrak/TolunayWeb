@@ -1,0 +1,62 @@
+
+## 404.html
+
+```html
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 | Tolunay</title>
+  <link rel="icon" type="image/png" href="image/pode.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#060608; --t:#f0f0f0; --t2:#888;
+      --w15:rgba(255,255,255,.15); --w08:rgba(255,255,255,.08);
+      --mono:'JetBrains Mono',monospace;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{
+      background:var(--bg); color:var(--t);
+      font-family:'Poppins',sans-serif;
+      height:100vh; display:flex; flex-direction:column;
+      align-items:center; justify-content:center; text-align:center;
+      overflow:hidden; position:relative;
+    }
+    body::before{content:'';position:fixed;inset:0;z-index:-1;
+      background:radial-gradient(ellipse 700px 500px at 10% 10%,rgba(255,255,255,.06) 0%,transparent 65%),
+        radial-gradient(ellipse 600px 450px at 90% 90%,rgba(255,255,255,.04) 0%,transparent 65%);}
+    .code{
+      font-family:var(--mono); font-size:clamp(4rem,15vw,8rem); font-weight:500;
+      letter-spacing:-2px; line-height:1;
+      background:linear-gradient(180deg,#fff,rgba(255,255,255,.35));
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+      text-shadow:0 0 40px rgba(255,255,255,.15);
+    }
+    .msg{margin-top:.5rem; font-size:1.1rem; color:var(--t2);}
+    .path{
+      margin-top:1rem; font-family:var(--mono); font-size:.85rem;
+      color:#ff6b6b; background:var(--w08); border:1px solid var(--w15);
+      padding:6px 14px; border-radius:8px;
+    }
+    .home-btn{
+      margin-top:2rem; display:inline-flex; align-items:center; gap:8px;
+      padding:12px 24px; border-radius:12px; border:1px solid var(--w15);
+      background:var(--w08); color:var(--t); text-decoration:none;
+      font-size:.9rem; font-weight:500; transition:.25s;
+    }
+    .home-btn:hover{background:rgba(255,255,255,.14); border-color:rgba(255,255,255,.3); transform:translateY(-2px);}
+  </style>
+</head>
+<body>
+  <div class="code">404</div>
+  <p class="msg">Aradığın sayfa burada değil.</p>
+  <p class="path" id="path"></p>
+  <a href="/" class="home-btn"><i class="fas fa-house"></i> Ana sayfaya dön</a>
+  <script>
+    document.getElementById('path').textContent = location.pathname;
+  </script>
+</body>
+</html>
