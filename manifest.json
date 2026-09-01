@@ -1,0 +1,21 @@
+{
+  "name": "Tolunay | Developer",
+  "short_name": "Tolunay",
+  "description": "Software Developer & Reverse Engineer with 9+ years of experience.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#060608",
+  "theme_color": "#060608",
+  "icons": [
+    {
+      "src": "image/pode.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "image/pode.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
